@@ -15,7 +15,7 @@ class CreateTagsHasArticlesTable extends Migration
     {
         Schema::create('tags_has_articles', function (Blueprint $table) {
              $table->integer('idtags')->unsigned();
-               $table->integer('idtags')->unsigned();
+               $table->integer('idarticles')->unsigned();
               $table->foreign('idtags')->references('idtags')->on('tags');
                $table->foreign('idarticles')->references('idarticles')->on('articles');
             $table->timestamps();
