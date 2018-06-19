@@ -16,8 +16,8 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('idcomments');
             $table->text('content');
-             $table->date('datePosts','y/m/h h:s');
-            $table->date('dateUpdate','y/m/d h:s');
+             $table->date('datePosts');
+            $table->date('dateUpdate');
               $table->integer('idarticles')->unsigned();
             $table->integer('idmembers')->unsigned();
              $table->integer('idcategories')->unsigned();

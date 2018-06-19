@@ -16,8 +16,8 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('idposts');
             $table->string('content',50);
-           $table->date('datePosts','y/m/h h:s');
-            $table->date('dateUpdate','y/m/d h:s');
+           $table->date('datePosts');
+            $table->date('dateUpdate');
                $table->integer('idtheme')->unsigned();
             $table->integer('idsubtheme')->unsigned();
             $table->integer('idmembers')->unsigned();

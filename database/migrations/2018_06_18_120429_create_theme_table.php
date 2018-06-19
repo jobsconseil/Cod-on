@@ -17,8 +17,8 @@ class CreateThemeTable extends Migration
             $table->increments('idtheme');
             $table->string('libelle',45);
             $table->string('description',50);
-            $table->date('dateCreate','y/m/h h:s');
-            $table->date('dateUpdate','y/m/d h:s');
+            $table->date('dateCreate');
+            $table->date('dateUpdate');
              $table->integer('idadministrators')->unsigned();
             $table->foreign('idadministrators')->references('idadministrators')->on('administrators');
             $table->timestamps();
