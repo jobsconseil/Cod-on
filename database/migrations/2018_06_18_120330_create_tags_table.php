@@ -17,8 +17,8 @@ class CreateTagsTable extends Migration
             $table->increments('idtags');
             $table->string('libelle',50);
             $table->string('picture',50);
-            $table->date('dateCreate','y/m/h h:s');
-            $table->date('dateUpdate','y/m/d h:s');
+            $table->date('dateCreate');
+            $table->date('dateUpdate');
             $table->integer('idmembers')->unsigned();
             $table->foreign('idmembers')->references('idmembers')->on('members');
             $table->timestamps();

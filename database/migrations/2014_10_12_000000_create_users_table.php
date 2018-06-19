@@ -19,8 +19,8 @@ class CreateUsersTable extends Migration
 			$table->string('email',50)->unique();
 			$table->string('password',45);
 			$table->string('picture',45);
-		 $table->date('dateCreate','y/m/h h:s');
-            $table->date('dateUpdate','y/m/d h:s');
+		 $table->date('dateCreate');
+            $table->date('dateUpdate');
 			$table->rememberToken();
 			$table->timestamps();
 		});

@@ -17,8 +17,8 @@ class CreateAdministratorsTable extends Migration
             $table->increments('idadministrators');
              $table->string('privilege',45);
              $table->string('recuperationEmail', 45);
-            $table->date('dateCreate','y/m/d h:s');
-            $table->date('dateUpdate','y/m/d h:s');
+            $table->date('dateCreate');
+            $table->date('dateUpdate');
             $table->integer('idusers')->unsigned();
             $table->foreign('idusers')->references('idusers')->on('users');
             $table->timestamps();

@@ -16,8 +16,8 @@ class CreateResponsePostTable extends Migration
         Schema::create('response_post', function (Blueprint $table) {
             $table->increments('idresponse_post');
             $table->string('content',50);
-            $table->date('datePosts','y/m/h h:s');
-            $table->date('dateUpdate','y/m/d h:s');
+            $table->date('datePosts');
+            $table->date('dateUpdate');
                $table->integer('idmembers')->unsigned();
                  $table->integer('idposts')->unsigned();
              $table->foreign('idmembers')->references('idmembers')->on('members');
