@@ -14,3 +14,24 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/admin', function () {
+    return view('Back.admin');
+});
+
+
+/*pages statiques*/
+Route::name('contact')->get('contact', 'Front\WelcomeController@contact');
+
+
+Auth::routes();
+
+/*
+| Register Authentifiaction
+*/
+Route::get('/confirm/{id}/{token}', 'Auth\Registercontroller@confirm');
+
+/*
+| Backend
+*/
+Route::name('admin')->get('/admin', 'Back\AdminController@index');
