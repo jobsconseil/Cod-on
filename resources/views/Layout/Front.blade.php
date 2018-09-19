@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="{{ asset('/Front/css/main.css') }}">
     </head>
 
-    <body class="homepage">
+    <body class="">
         <header id="header">
             <div class="container-fluid">
                 <div class="row align-items-center justify-content-between d-flex">
@@ -38,33 +38,13 @@
                     </div>
                     <nav id="nav-menu-container">
                         <ul class="nav-menu">
-                            <li class="menu-active"><a href="index-2.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li class="menu-has-children">
-                                <a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="privacy.html">Privecy Policy</a></li>
-                                    <li><a href="terms.html">Terms & Conditions</a></li>
-                                    <li><a href="elements.html">Elements</a></li>
-                                    <li class="menu-has-children">
-                                        <a href="#">Level two    </a>
-                                        <ul>
-                                            <li><a href="#">Item One</a></li>
-                                            <li><a href="#">Item Two</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-has-children">
-                                <a href="#">Blog</a>
-                                <ul>
-                                    <li><a href="blog-home.html">Blog Home</a></li>
-                                    <li><a href="blog-single.html">Single Blog</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                        </li>
+                            <li class="menu-active"><a href="/">Accueil</a></li>
+                            <li><a href="/">Forum</a></li>
+                            <li><a href="/">Blog</a></li>
+                            <li><a href="{{route('contact')}}">Contact</a></li>
+                            @if(Auth::guest())
+                                <li><a class="generic-btn circle primary" href="{{route('login')}}">Connexion</a></li>
+                            @endif
                         </ul>
                     </nav>
                     <!-- #nav-menu-container -->
@@ -82,15 +62,16 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
-                            <h6>About Us</h6>
+                            <h6>À Propos de nous</h6>
                             <p>
-                                Why read motivational sayings? For motivation! You might need a bit, if you can use last year’s list of goals this year because it’s as good as new. All of us can benefit from inspirational.
+                                Nous sommes une équipe de jeunes développeur soucieux du développement numérique de notre continent Africain. Nous voulons être acteurs de cet évolution à travers des réalisations comme celle-ci.
+                                Et faire profiter tout un chacun des connaissances et des expériences des uns et des autres.
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="single-footer-widget">
-                            <h6>Top Products</h6>
+                            <h6>Top Articles</h6>
                             <ul>
                                 <li><a href="#">Managed Website</a></li>
                                 <li><a href="#">Managed Reputation</a></li>
@@ -102,11 +83,11 @@
                     <div class="col-lg-5 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
                             <h6>Newsletter</h6>
-                            <p>You can trust us. we only send promo offers, not a single spam.</p>
+                            <p>Inscrivez vous suivre toute notre actualité et être informé sur les évènements du numérique.</p>
                             <div id="mc_embed_signup">
-                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
+                                <form action="#" method="post">
                                     <div class="input-group newsletter-form-group">
-                                        <input type="text" class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                                        <input type="text" class="form-control" name="email" placeholder="Votre Adresse Mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
                                         <div class="input-group-btn">
                                             <button class="btn btn-default" type="submit">
                                                 <span class="lnr lnr-arrow-right"></span>
@@ -127,8 +108,8 @@
                         <div class="footer-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
+                            <a href="#"><i class="fa fa-git"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
