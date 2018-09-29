@@ -69,6 +69,7 @@
                                 {{$errors->first('password_confirmation')}}
                             @endcomponent
                         @endif
+                        <br>
                         <button class="btn btn-lg btn-primary btn-block btn-signin text-uppercase" type="submit">Valider</button>
                     </form>
                     <!-- /form -->

@@ -499,7 +499,7 @@ temporary rendered events).
 }
 
 
-/* Global Event Styles
+/* Global Evenement Styles
 --------------------------------------------------------------------------------------------------*/
 
 .fc-event {
@@ -578,7 +578,7 @@ temporary rendered events).
 }
 
 
-/* Event Selection (only for touch devices)
+/* Evenement Selection (only for touch devices)
 --------------------------------------------------------------------------------------------------*/
 
 .fc-event.fc-selected {
@@ -728,7 +728,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 
-/* Event Limiting
+/* Evenement Limiting
 --------------------------------------------------------------------------------------------------*/
 
 /* "more" link that represents hidden events */
@@ -1078,7 +1078,7 @@ a.fc-more:hover {
 }
 
 
-/* TimeGrid Event Containment
+/* TimeGrid Evenement Containment
 --------------------------------------------------------------------------------------------------*/
 
 .fc-ltr .fc-time-grid .fc-event-container { /* space on the sides of events for LTR (default) */
@@ -1102,7 +1102,7 @@ a.fc-more:hover {
 }
 
 
-/* Generic Vertical Event
+/* Generic Vertical Evenement
 --------------------------------------------------------------------------------------------------*/
 
 .fc-v-event.fc-not-start { /* events that are continuing from another day */
@@ -1126,7 +1126,7 @@ a.fc-more:hover {
 }
 
 
-/* TimeGrid Event Styling
+/* TimeGrid Evenement Styling
 ----------------------------------------------------------------------------------------------------
 We use the full "fc-time-grid-event" class instead of using descendants because the event won't
 be a descendant of the grid when it is being dragged.

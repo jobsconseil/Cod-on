@@ -28,7 +28,7 @@ class MemberRequest extends FormRequest
             'bio' => 'required',
             'location' => 'required',
             'jobs' => 'required',
-            'RecuperationEmail' => 'required|unique:members,Email'
+            'recuperationEmail' => 'required|unique:members,Email'
         ];
     }
 

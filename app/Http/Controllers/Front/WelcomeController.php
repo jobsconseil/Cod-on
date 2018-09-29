@@ -1,4 +1,6 @@
-<?php namespace App\Http\Controllers\Front;
+<?php
+
+namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;

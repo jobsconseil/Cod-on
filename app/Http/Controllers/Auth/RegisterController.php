@@ -67,7 +67,7 @@ class RegisterController extends Controller
 
         event(new Registered($user = $this->create($request->all())));
 
-        //$this->guard()->login($user);
+        $this->guard()->login($user);
         $user->notify(new RegisterUser());
         return $this->registered($request, $user)
             ?: redirect('/login')->with('success', 'Votre compte à bien été créer, 
@@ -86,12 +86,12 @@ class RegisterController extends Controller
             'username' => 'required|string|max:255|min:3',
             'name' => 'required|string|max:255|min:3',
             'email' => 'required|string|email|max:255|unique:users',
-            'recuperationEmail' => 'required|string|email|max:255|unique:users',
-            'location' => 'required|string|max:13|min:8|unique:users',
+            'recuperationEmail' => 'required|string|email|max:255|unique:members',
+            'location' => 'required|string|max:50|min:8|',
             'jobs' => 'required|string|max:100|min:2',
             'experience' => 'required|string|max:255',
             'bio' => 'required|string|max:255|min:10',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6',
         ]);
     }
 
@@ -107,7 +107,7 @@ class RegisterController extends Controller
         $user = new User();
         $member = new Member();
 
-        $user->username = $data['nom'];
+        $user->username = $data['name'];
         $user->email = $data['email'];
         $user->role = 'member';
         $user->password = bcrypt($data['password']);
@@ -121,7 +121,9 @@ class RegisterController extends Controller
         $member->jobs = $data['jobs'];
         $member->experience = $data['experience'];
         $member->recuperationEmail = $data['recuperationEmail'];
-        $member->idusers = $user->idusers;
+        $member->idusers = $user->id;
+
+
 
         $member->save();
 

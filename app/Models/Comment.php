@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use App\Models\Member;
 use Illuminate\Database\Eloquent\Model;
@@ -24,17 +24,17 @@ class Comment extends Model
 
 
     public function Article(){
-        return $this-> belongsTo(App\Models\Article);
+        return $this-> belongsTo('App\Models\Article');
     }
     public function Categoie(){
-        return $this-> belongsTo(App\Models\Categoie);
+        return $this-> belongsTo('App\Models\Categoie');
     }
     public function member(){
-        return $this->belongsTo(App\Models\Member);
+        return $this->belongsTo('App\Models\Member');
     }
 
     public function Response_Commenr(){
-        return $this-> hasMany(App\Models\Response_Comment);
+        return $this-> hasMany('App\Models\Response_Comment');
     }
 
 }

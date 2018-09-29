@@ -23,16 +23,16 @@ class Subject extends Model
 
 
     public function Theme(){
-        return $this-> belongsTo(App\Models\Theme);
+        return $this-> belongsTo('App\Models\Theme');
     }
     public function Subtheme(){
-        return $this-> belongsTo(App\Models\Subtheme);
+        return $this-> belongsTo('App\Models\Subtheme');
     }
     public function member(){
-        return $this->belongsTo(App\Models\member);
+        return $this->belongsTo('App\Models\member');
     }
 
     public function Post(){
-        return $this-> hasMany(App\Models\Post);
+        return $this-> hasMany('App\Models\Post');
     }
 }

@@ -21,16 +21,16 @@ class Theme extends Model
     ];
 
     public function Administrator(){
-        return $this-> belongsTo(App\Models\Admistrator);
+        return $this-> belongsTo('App\Models\Admistrator');
     }
     public function Subtheme(){
-        return $this-> hasMany(App\Models\Subtheme);
+        return $this-> hasMany('App\Models\Subtheme');
     }
     public function Subject(){
-        return $this-> hasMany(App\Models\Subject);
+        return $this-> hasMany('App\Models\Subject');
     }
 
     public function Post(){
-        return $this-> hasMany(App\Models\Post);
+        return $this-> hasMany('App\Models\Post');
     }
 }

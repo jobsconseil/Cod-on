@@ -17,8 +17,6 @@ class CreateRankingsTable extends Migration
             $table->increments('idrankings');
             $table->integer('nbreEtoile');
             $table->string('libelle',50);
-            $table->date('dateCreate');
-            $table->date('dateUpdate');
             $table->timestamps();
         });
     }

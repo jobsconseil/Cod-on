@@ -17,11 +17,9 @@ class CreateSubthemeTable extends Migration
             $table->increments('idsubtheme');
             $table->string('libelle',50);
             $table->text('description');
-             $table->date('dateCreate');
-            $table->date('dateUpdate');
-              $table->integer('idtheme')->unsigned();
-               $table->integer('idadministrators')->unsigned();
-                $table->foreign('idtheme')->references('idtheme')->on('theme');
+            $table->integer('idtheme')->unsigned();
+            $table->integer('idadministrators')->unsigned();
+            $table->foreign('idtheme')->references('idtheme')->on('theme');
             $table->foreign('idadministrators')->references('idadministrators')->on('administrators');
             $table->timestamps();
         });

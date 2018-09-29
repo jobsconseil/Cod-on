@@ -20,8 +20,6 @@ class CreateMembersTable extends Migration
             $table->string('location',45);
             $table->string('jobs',50);
             $table->string('recuperationEmail',50);
-            $table->date('dateCreate');
-            $table->date('dateUpdate');
             $table->integer('idusers')->unsigned();
             $table->foreign('idusers')->references('idusers')->on('users');
             $table->timestamps();

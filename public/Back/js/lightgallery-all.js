@@ -2158,7 +2158,7 @@
     Video.prototype.init = function() {
         var _this = this;
 
-        // Event triggered when video url found without poster
+        // Evenement triggered when video url found without poster
         _this.core.$el.on('hasVideo.lg.tm', function(event, index, src, html) {
             _this.core.$slide.eq(index).find('.lg-video').append(_this.loadVideo(src, 'lg-object', true, index, html));
             if (html) {

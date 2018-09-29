@@ -18,8 +18,6 @@ class CreateSubjectsTable extends Migration
             $table->string('libelle',50);
             $table->text('description');
             $table->integer('resolu');
-           $table->date('dateCreate');
-            $table->date('dateUpdate');
              $table->integer('idtheme')->unsigned();
             $table->integer('idsubtheme')->unsigned();
             $table->integer('idmembers')->unsigned();

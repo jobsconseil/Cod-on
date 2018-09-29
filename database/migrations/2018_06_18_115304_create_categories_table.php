@@ -16,8 +16,6 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('idCategories');
             $table->string('libelle',45);
-            $table->date('dateCreate');
-            $table->date('dateUpdate');
             $table->integer('idadministrators')->unsigned();
             $table->foreign('idadministrators')->references('idadministrators')->on('administrators');
             $table->timestamps();

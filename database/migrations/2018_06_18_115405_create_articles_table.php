@@ -19,8 +19,6 @@ class CreateArticlesTable extends Migration
             $table->string('contenu',45);
             $table->integer('status');
             $table->string('picture',50);
-             $table->date('dateCreate');
-            $table->date('dateUpdate');
             $table->integer('idcategories')->unsigned();
             $table->integer('idmembers')->unsigned();
             $table->foreign('idcategories')->references('idcategories')->on('categories');

@@ -16,8 +16,6 @@ class CreateResponseCommentTable extends Migration
         Schema::create('response_comment', function (Blueprint $table) {
             $table->increments('idresponse_comment');
             $table->text('content');
-             $table->date('datePosts');
-            $table->date('dateUpdate');
              $table->integer('idmembers')->unsigned();
              $table->integer('idcomments')->unsigned();
             $table->foreign('idmembers')->references('idmembers')->on('members');

@@ -24,6 +24,6 @@ class Ranking extends Model
 
 
     public function Article(){
-        return $this->belongsToMany(App\Models\Article);
+        return $this->belongsToMany('App\Models\Article');
     }
 }

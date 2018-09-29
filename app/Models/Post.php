@@ -24,25 +24,25 @@ class Post extends Model
 
 
     public function Theme(){
-        return $this-> belongsTo(App\Models\Theme);
+        return $this-> belongsTo('App\Models\Theme');
     }
     public function Subtheme(){
-        return $this-> belongsTo(App\Models\Subtheme);
+        return $this-> belongsTo('App\Models\Subtheme');
     }
     public function member(){
-        return $this->belongsTo(App\Models\member);
+        return $this->belongsTo('App\Models\member');
     }
 
     public function Subject(){
-        return $this->belongsTo(App\Models\Subject);
+        return $this->belongsTo('App\Models\Subject');
     }
 
     public function Response_Post(){
-        return $this-> hasMany(App\Models\Response_Post);
+        return $this-> hasMany('App\Models\Response_Post');
     }
 
     public function Tag(){
-        return $this->belongsToMany(App\Models\Tag);
+        return $this->belongsToMany('App\Models\Tag');
     }
 
 

@@ -17,16 +17,16 @@ class Subtheme extends Model
 
 
     public function Theme(){
-        return $this-> belongsTo(App\Models\Theme);
+        return $this-> belongsTo('App\Models\Theme');
     }
     public function Administrator(){
-        return $this-> belongsTo(App\Models\Administrator);
+        return $this-> belongsTo('App\Models\Administrator');
     }
 
     public function Subject(){
-        return $this-> hasMany(App\Models\Subject);
+        return $this-> hasMany('App\Models\Subject');
     }
     public function Post(){
-        return $this-> hasMany(App\Models\Post);
+        return $this-> hasMany('App\Models\Post');
     }
 }

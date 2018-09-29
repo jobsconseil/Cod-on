@@ -23,16 +23,16 @@ class Tag extends Model
 
 
     public function member(){
-        return $this->belongsTo(App\Models\member);
+        return $this->belongsTo('App\Models\member');
     }
 
 
     public function Post(){
-        return $this->belongsToMany(App\Models\Post);
+        return $this->belongsToMany('App\Models\Post');
     }
 
 
     public function Article(){
-        return $this->belongsToMany(App\Models\Article);
+        return $this->belongsToMany('App\Models\Article');
     }
 }

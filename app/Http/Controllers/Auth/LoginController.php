@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -70,22 +71,15 @@ class LoginController extends Controller
 
         if ($this->attemptLogin($request)) {
 
-            $roles = $this->guard()->user()->roles;
+            $role = $this->guard()->user()->role;
 
-            foreach ($roles as $role):
+            if ($role == 'member'){
+                return $this->sendLoginResponse($request);
+            }
 
-
-                if ($role->libelle == 'porteur' || $role->libelle == 'apprenant' || $role->libelle == 'contributeur'){
-
-                    return $this->sendLoginResponse($request);
-                }
-
-                if ($role->libelle == 'editeur' || $role->libelle == 'admin'){
-
-                    return $this->sendLoginResponseAdmin($request);
-                }
-
-            endforeach;
+            if ($role == 'administrator'){
+                return $this->sendLoginResponseAdmin($request);
+            }
 
         }
 

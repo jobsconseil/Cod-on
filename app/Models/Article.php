@@ -23,22 +23,22 @@ class Article extends Model
 
 
     public function Categorie(){
-        return $this-> belongsTo(App\Models\Categorie);
+        return $this-> belongsTo('App\Models\Categorie');
     }
     public function Member(){
-        return $this-> belongsTo(App\Models\Member);
+        return $this-> belongsTo('App\Models\Member');
     }
 
     public function Comment(){
-        return $this-> hasMany(App\Models\Comment);
+        return $this-> hasMany('App\Models\Comment');
     }
 
     public function Ranking(){
-        return $this->belongsToMany(App\Models\Ranking);
+        return $this->belongsToMany('App\Models\Ranking');
     }
 
     public function Tag(){
-        return $this->belongsToMany(App\Models\Tag);
+        return $this->belongsToMany('App\Models\Tag');
     }
 
     protected $table = 'Articles';

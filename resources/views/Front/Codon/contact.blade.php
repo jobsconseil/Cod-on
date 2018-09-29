@@ -1,4 +1,4 @@
-@extends('Layout\Front')
+@extends('Layout.Front')
 
 @section('content')
     <!-- Start top-section Area -->

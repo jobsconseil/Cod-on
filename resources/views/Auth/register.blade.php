@@ -121,12 +121,12 @@
                                                     @endcomponent
                                                 @endif
                                             </div>
-                                            <div class="form-group {!! $errors->has('password_corfirmation') ? 'has-error' : '' !!}">
+                                            <div class="form-group {!! $errors->has('password_confirmation') ? 'has-error' : '' !!}">
                                                 <label class="text-uppercase mt-10" for="">Confirmer Mot de Passe</label>
-                                                <input type="password" name="password_corfirmation" id="password_confirm" tabindex="1" class="form-control" placeholder="Confirmer Votre Mot de Passe" value="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirmer Votre Mot de Passe'">
-                                                @if( $errors->has('password_corfirmation'))
+                                                <input type="password" name="password_confirmation" id="password_confirm" tabindex="1" class="form-control" placeholder="Confirmer Votre Mot de Passe" value="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirmer Votre Mot de Passe'">
+                                                @if( $errors->has('password_confirmation'))
                                                     @component('Layout.error')
-                                                        {{$errors->first('password_corfirmation')}}
+                                                        {{$errors->first('password_confirmation')}}
                                                     @endcomponent
                                                 @endif
                                             </div>

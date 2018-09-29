@@ -21,10 +21,10 @@ class Response_Post extends Model
 
 
     public function Post(){
-        return $this-> belongsTo(App\Models\ Post);
+        return $this-> belongsTo('App\Models\ Post');
     }
 
     public function Member(){
-        return $this-> belongsTo(App\Models\Member);
+        return $this-> belongsTo('App\Models\Member');
     }
 }

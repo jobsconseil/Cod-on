@@ -15,10 +15,10 @@ class Response_Comment extends Model
 
 
     public function Comment(){
-        return $this-> belongsTo(App\Models\ Comment);
+        return $this-> belongsTo('App\Models\ Comment');
     }
 
     public function Member(){
-        return $this-> belongsTo(App\Models\Member);
+        return $this-> belongsTo('App\Models\Member');
     }
 }

@@ -22,14 +22,14 @@ class Categorie extends Model
     ];
 
     public function Article(){
-        return $this-> hasMany(App\Models\Article);
+        return $this-> hasMany('App\Models\Article');
     }
 
     public function Administrator(){
-        return $this-> belongsTo(App\Models\ Administrator);
+        return $this-> belongsTo('App\Models\ Administrator');
     }
 
     public function Comment(){
-        return $this-> hasMany(App\Models\Comment);
+        return $this-> hasMany('App\Models\Comment');
     }
 }
