@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subject extends Model
 {
-    use Likeable;
+    //use Likeable;
 
     /**
      * The attributes that are mass assignable.

@@ -1,4 +1,4 @@
-@extends('Layout\Back')
+@extends('Layout.Back')
 
 @section('content')
 

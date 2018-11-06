@@ -27,7 +27,7 @@ class ArticleController extends Controller {
      */
     public function __construct()
     {
-        $this->middleware('auth')->except(['index', 'show']);
+        $this->middleware('guest');//->except(['index', 'show']);
     }
 
     /**
@@ -62,7 +62,7 @@ class ArticleController extends Controller {
      */
     public function store(ArticleRequest $request)
     {
-
+        dd($request);die;
         Article::create($request->all());
         return redirect('blog')
             ->with('success', 'L\'article a bien été ajoutée');

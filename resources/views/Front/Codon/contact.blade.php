@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-lg-4 top-right">
                     <ul>
-                        <li><a href="/">Accueil</a><span class="lnr lnr-arrow-right"></span></li>
+                        <li><a href="{{route('accueil')}}">Accueil</a><span class="lnr lnr-arrow-right"></span></li>
                         <li><a href="{{route('contact')}}">Entrer En Contact</a></li>
                     </ul>
                 </div>

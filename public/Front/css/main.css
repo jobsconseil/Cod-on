@@ -2830,15 +2830,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .p1-gradient-bg, .primary-btn {
-  background-image: -moz-linear-gradient(0deg, #5f36ff 0%, #7fb8ff 100%);
-  background-image: -webkit-linear-gradient(0deg, #5f36ff 0%, #7fb8ff 100%);
-  background-image: -ms-linear-gradient(0deg, #5f36ff 0%, #7fb8ff 100%);
+  background-image: -moz-linear-gradient(0deg, #456588 0%, #7fb8ff 100%);
+  background-image: -webkit-linear-gradient(0deg, #456588 0%, #7fb8ff 100%);
+  background-image: -ms-linear-gradient(0deg, #456588 0%, #7fb8ff 100%);
 }
 
 .p1-gradient-color, .section-title h6, .banner-content h1, .banner-content .genric-btn2:hover, .review-area .single-testimonial:hover h4, .latest-blog-area .single-blog .genric-btn:hover, .latest-blog-area .single-blog:hover .detials h4, .single-counter h1, .footer-text .footer-text-right .footer-social a:hover i {
-  background: -moz-linear-gradient(60deg, #5f36ff 0%, #7fb8ff 100%);
-  background: -webkit-linear-gradient(60deg, #5f36ff 0%, #7fb8ff 100%);
-  background: -ms-linear-gradient(60deg, #5f36ff 0%, #7fb8ff 100%);
+  background: -moz-linear-gradient(60deg, #456588 0%, #7fb8ff 100%);
+  background: -webkit-linear-gradient(60deg, #456588 0%, #7fb8ff 100%);
+  background: -ms-linear-gradient(60deg, #456588 0%, #7fb8ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -4570,7 +4570,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  color: #ddd8ff;
+  color: rgba(133, 183, 255, 0.59);
   padding: 11px;
 }
 

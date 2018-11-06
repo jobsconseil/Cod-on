@@ -17,7 +17,9 @@ Route::get('/', function () {
 
 
 /*pages statiques*/
+Route::name('accueil')->get('accueil', 'Front\WelcomeController@index');
 Route::name('contact')->get('contact', 'Front\WelcomeController@contact');
+
 
 
 Auth::routes();
@@ -32,15 +34,15 @@ Route::prefix('blog')->namespace('Front\Blog')->group(function(){
     Route::name('blog.store')->post('store', 'ArticleController@store');
     Route::name('blog.edit')->get('edit/{id}', 'ArticleController@edit');
     Route::name('blog.update')->put('article/{id}', 'ArticleController@update');
-    Route::name('blog.all')->get('blog', 'ArticleController@index');
+    Route::name('blog')->get('blog', 'ArticleController@index');
     Route::name('blog.item')->get('show/{id}', 'ArticleController@show');
 
     //Commentaire
-    Route::name('blog.store_cm')->post('store', 'CommentaireController@store');
+    Route::name('blog.store_cm')->post('store_cm', 'CommentaireController@store');
     Route::name('blog.update_cm')->put('commentaire/{id}', 'CommentaireController@update');
 
     //Reponse Commentaire
-    Route::name('blog.store_rc')->post('store', 'CommentaireController@store_rc');
+    Route::name('blog.store_rc')->post('store_rc', 'CommentaireController@store_rc');
     Route::name('blog.update_rc')->put('reponse_com/{id}', 'CommentaireController@update_rc');
 
 
@@ -79,7 +81,7 @@ Route::prefix('forum')->namespace('Front\Forum')->group(function(){
     Route::name('forum.store')->post('store', 'SujetController@store');
     Route::name('forum.edit')->get('edit/{id}', 'SujetController@edit');
     Route::name('forum.update')->put('article/{id}', 'SujetController@update');
-    Route::name('forum.all')->get('subject', 'SujetController@index');
+    Route::name('forum.subject')->get('subject', 'SujetController@index');
     Route::name('forum.item')->get('show/{id}', 'SujetController@show');
 
     //Post
@@ -87,7 +89,7 @@ Route::prefix('forum')->namespace('Front\Forum')->group(function(){
     Route::name('forum.store')->post('store', 'PostController@store');
     Route::name('forum.edit')->get('edit/{id}', 'PostController@edit');
     Route::name('forum.update')->put('article/{id}', 'PostController@update');
-    Route::name('forum.all')->get('post', 'PostController@index');
+    Route::name('forum.post')->get('post', 'PostController@index');
     Route::name('forum.item')->get('show/{id}', 'PostController@show');
 
     //Commentaire

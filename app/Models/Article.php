@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
 
-    use Likeable;
+    //use Likeable;
 
     /**
      * The attributes that are mass assignable.
@@ -17,8 +17,6 @@ class Article extends Model
     protected $fillable = [
         'title',
         'content',
-        'datePosts',
-        'dateUpdate'
     ];
 
 
